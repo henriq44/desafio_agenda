@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "610244717002",
+    "project_id": "desafio-agenda",
+    "storage_bucket": "desafio-agenda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610244717002:android:5423aa42432e966f924733",
+        "android_client_info": {
+          "package_name": "com.example.desafio_agenda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610244717002-ra3ai2gnd71vr25tugub3kct58j3a2qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQFq1JqY0JoRaUAbLMNxS_k6Wy-8g4cQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "610244717002-ra3ai2gnd71vr25tugub3kct58j3a2qh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
