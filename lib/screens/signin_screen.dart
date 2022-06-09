@@ -35,8 +35,12 @@ class _SignInScreenState extends State<SignInScreen> {
             const SizedBox(
               height: 30,
             ),
-            reusableTextField("Senha", Icons.lock, true, _passwordTextController)
-          ]) ,
+            reusableTextField("Senha", Icons.lock, true, _passwordTextController),
+            SizedBox(
+              height: 20,
+            ),
+            logInSignUpButton(context, true, (){})
+          ]),
           )) ,),);
   
     
