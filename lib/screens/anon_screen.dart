@@ -1,5 +1,3 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 class anonScreen extends StatefulWidget {
@@ -11,8 +9,27 @@ class anonScreen extends StatefulWidget {
 
 class _anonScreenState extends State<anonScreen> {
   @override
-  Widget build(BuildContext context) {
-    return Container();
+  Widget build(BuildContext context) => DefaultTabController(
+    length: 1,
+    child: Scaffold(
+      appBar: AppBar(
+      title:  const Text('TabBar'),
+      centerTitle: true,
+      bottom: const TabBar (
+        tabs: [
+          Tab(text: 'Meus Eventos'),
+        ],
+        ),
+    ),
+    body: const TabBarView(
+      children: [
+        Center(child: Text('tab 2 conteúdo')),
+      ]),
+    ),
     
-  }
+  ); 
+    
+    
+  
 }
+
