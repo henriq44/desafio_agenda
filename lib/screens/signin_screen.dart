@@ -1,4 +1,5 @@
 
+import 'package:desafio_agenda/screens/anon_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../reusable_widgets/reusable_widget.dart';
@@ -39,11 +40,29 @@ class _SignInScreenState extends State<SignInScreen> {
             SizedBox(
               height: 20,
             ),
-            logInSignUpButton(context, true, (){})
+            logInSignUpButton(context, true, (){}),
+            anonOption()
           ]),
           )) ,),);
   
     
+  }
+
+  Row anonOption(){
+    return Row (
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const anonScreen()));
+          },
+          child: const Text(
+            "Continuar como anônimo",
+            style: TextStyle(color: Color.fromRGBO(112, 82, 204, 1), fontWeight: FontWeight.bold ),
+          ),
+        )
+      ],
+    );
   }
 
   
