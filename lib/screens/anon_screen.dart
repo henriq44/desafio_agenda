@@ -1,3 +1,4 @@
+import 'package:desafio_agenda/page/second_page.dart';
 import 'package:flutter/material.dart';
 
 class AnonScreen extends StatefulWidget {
@@ -23,7 +24,7 @@ class _AnonScreenState extends State<AnonScreen> {
     ),
     body: const TabBarView(
       children: [
-        Center(child: Text('tab 2 conteúdo')),
+        SecondPage(),
       ]),
     ),
     

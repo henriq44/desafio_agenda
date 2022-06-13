@@ -1,4 +1,5 @@
 import 'package:desafio_agenda/screens/signin_screen.dart';
+import 'package:desafio_agenda/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
