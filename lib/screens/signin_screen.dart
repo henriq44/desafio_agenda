@@ -1,7 +1,10 @@
 
-import 'package:desafio_agenda/screens/anon_screen.dart';
-import 'package:flutter/material.dart';
+import 'dart:developer';
 
+import 'package:desafio_agenda/screens/anon_screen.dart';
+import 'package:desafio_agenda/screens/home_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import '../reusable_widgets/reusable_widget.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -13,8 +16,8 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
 
-  TextEditingController _passwordTextController = TextEditingController();
-  TextEditingController _emailTextController = TextEditingController();
+  final TextEditingController _passwordTextController = TextEditingController();
+  final TextEditingController _emailTextController = TextEditingController();
 
 
   @override
@@ -37,10 +40,19 @@ class _SignInScreenState extends State<SignInScreen> {
               height: 30,
             ),
             reusableTextField("Senha", Icons.lock, true, _passwordTextController),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            logInSignUpButton(context, true, (){}),
+            logInSignUpButton(context, true, (){
+
+            FirebaseAuth.instance.signInWithEmailAndPassword(email: _emailTextController.text, password: _passwordTextController.text).then((value) {
+                    Navigator.push(context,
+                         MaterialPageRoute(builder: (context) => const HomeScreen()));
+            })/*.onError((error, stackTrace) {
+              log("${error}");
+            })*/;
+             
+            }),
             anonOption()
           ]),
           )) ,),);
@@ -54,7 +66,7 @@ class _SignInScreenState extends State<SignInScreen> {
       children: [
         GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const anonScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const AnonScreen()));
           },
           child: const Text(
             "Continuar como anônimo",

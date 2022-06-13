@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class anonScreen extends StatefulWidget {
-  const anonScreen({Key? key}) : super(key: key);
+class AnonScreen extends StatefulWidget {
+  const AnonScreen({Key? key}) : super(key: key);
 
   @override
-  State<anonScreen> createState() => _anonScreenState();
+  State<AnonScreen> createState() => _AnonScreenState();
 }
 
-class _anonScreenState extends State<anonScreen> {
+class _AnonScreenState extends State<AnonScreen> {
   @override
   Widget build(BuildContext context) => DefaultTabController(
     length: 1,
