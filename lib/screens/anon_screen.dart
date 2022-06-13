@@ -13,7 +13,7 @@ class _AnonScreenState extends State<AnonScreen> {
     length: 1,
     child: Scaffold(
       appBar: AppBar(
-      title:  const Text('TabBar'),
+      title:  const Text('Eventos'),
       centerTitle: true,
       bottom: const TabBar (
         tabs: [

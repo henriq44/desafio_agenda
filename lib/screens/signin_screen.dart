@@ -1,6 +1,3 @@
-
-import 'dart:developer';
-
 import 'package:desafio_agenda/screens/anon_screen.dart';
 import 'package:desafio_agenda/screens/home_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
